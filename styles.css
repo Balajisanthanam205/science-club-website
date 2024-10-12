@@ -1,0 +1,170 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0'); /* Background image */
+  background-size: cover; /* Cover the entire background */
+  background-repeat: no-repeat; /* No repeat */
+  color: #f0f0f0; /* Light gray text for readability */
+}
+#About{
+  width: 60%;
+  
+}
+
+header {
+  text-align: center;
+  background: rgba(0, 204, 255, 0.7); /* Vibrant cyan with transparency */
+  backdrop-filter: blur(10px); /* Glass blur effect */
+  padding: 20px; /* Increased padding */
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 153, 255, 0.5); /* Vibrant blue for navbar */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar li {
+  margin: 0 20px; /* Increased margin for spacing */
+}
+
+.navbar a {
+  color: #00ff7f; /* Bright green for links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ffcc00; /* Yellow hover effect */
+}
+
+h1 {
+  margin: 10px 0; /* Added margin */
+}
+
+h2 {
+  margin: 20px 0;
+}
+
+.discoveries {
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.scene {
+  display: flex;
+  flex-wrap: wrap; /* Wrap the cards */
+  justify-content: center; /* Center the cards */
+  gap: 20px; /* Space between cards */
+}
+
+.card {
+  width: 240px; /* Adjusted width for better display */
+  height: 360px; /* Adjusted height */
+  perspective: 1000px; /* Enable 3D perspective */
+}
+
+.card__face {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.6s, scale 0.6s; /* Added scale transition */
+}
+
+.card__face--front {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent front */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__face--front img {
+  width: 100%; /* Make the image take full width of the card */
+  height: 100%; /* Make the image take full height of the card */
+  object-fit: cover; /* Cover the card area without stretching */
+}
+
+.card__face--back {
+  background: rgba(0, 153, 255, 0.8); /* Vibrant blue for the back */
+  color: #fff; /* White text for contrast */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transform: rotateY(180deg); /* Initially flipped */
+}
+
+.card:hover .card__face--front {
+  transform: rotateY(180deg) scale(1.1); /* Flip the front and increase size */
+}
+
+.card:hover .card__face--back {
+  transform: rotateY(0) scale(1.1); /* Show the back and increase size */
+}
+
+.marquee {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee p {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite; /* Animation speed */
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+footer {
+  text-align: center;
+  background: rgba(0, 204, 255, 0.7); /* Vibrant cyan with transparency */
+  backdrop-filter: blur(10px); /* Glass blur effect */
+  padding: 15px; /* Reduced padding */
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+  margin-top: auto; /* Push footer to the bottom */
+}
+
+.social-media {
+  margin-top: 10px; /* Space above the icons */
+}
+
+.social-media a {
+  color: #f0f0f0; /* Icon color */
+  margin: 0 10px; /* Space between icons */
+  font-size: 24px; /* Size of the icons */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.social-media a:hover {
+  color: #ffcc00; /* Change color on hover */
+}
